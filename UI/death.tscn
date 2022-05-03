@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Main.gd" type="Script" id=1]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.266667, 0.266667, 0.266667, 1 )
+
+[node name="MAYHEM" type="Label" parent="."]
+margin_left = 83.0
+margin_top = 208.0
+margin_right = 351.0
+margin_bottom = 300.0
+rect_scale = Vector2( 5, 5 )
+text = "try again.  git gud loser"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 433.0
+margin_top = 367.0
+margin_right = 533.0
+margin_bottom = 407.0
+keep_pressed_outside = true
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 439.0
+margin_top = 454.0
+margin_right = 539.0
+margin_bottom = 494.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
