@@ -2,9 +2,18 @@ extends Node
 
 var menu = null
 
+var health = 100
+
+
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	load_input()
+	
+func update_health(h):
+	health += h
+	var Health = get_node_or_null("/root/Game/UI/HUD/Health")
+	if Health != null:
+		Health.text = "Health: " + str(health)
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("menu"):

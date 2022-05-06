@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://UI/Main.gd" type="Script" id=1]
+[ext_resource path="res://Assets/end.png" type="Texture" id=2]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -26,22 +27,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 505, 394 )
+texture = ExtResource( 2 )
+
 [node name="Play" type="Button" parent="."]
-margin_left = 433.0
-margin_top = 367.0
-margin_right = 533.0
-margin_bottom = 407.0
+margin_left = 45.0
+margin_top = 334.0
+margin_right = 145.0
+margin_bottom = 374.0
 keep_pressed_outside = true
-text = "Play"
+text = "Play Again"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 439.0
-margin_top = 454.0
-margin_right = 539.0
-margin_bottom = 494.0
+margin_left = 41.0
+margin_top = 405.0
+margin_right = 141.0
+margin_bottom = 445.0
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
