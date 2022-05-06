@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Key/Key.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Enemy/BigEnemy.gd" type="Script" id=25]
 [ext_resource path="res://Enemy/BigEnemy.tscn" type="PackedScene" id=26]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=27]
+[ext_resource path="res://Assets/bruhhhh.png" type="Texture" id=28]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 50 )
@@ -132,6 +133,10 @@ uv1_scale = Vector3( 3, 2, 1 )
 
 [sub_resource type="SpatialMaterial" id=25]
 albedo_texture = ExtResource( 16 )
+
+[sub_resource type="SpatialMaterial" id=38]
+albedo_texture = ExtResource( 28 )
+uv1_scale = Vector3( 3, 2, 1 )
 
 [sub_resource type="CapsuleShape" id=4]
 radius = 0.5
@@ -985,6 +990,16 @@ material = SubResource( 25 )
 transform = Transform( 0.110048, 0, 0, 0, 0.590459, 0, 0, 0, 1, -5.15763, 2.43596, -0.0970306 )
 mesh = SubResource( 22 )
 material = SubResource( 23 )
+
+[node name="CSGMesh51" type="CSGMesh" parent="Maze/ActualMaze/CSGMesh52"]
+transform = Transform( -0.0317455, 0, 0.985282, 0, 1, 0, -0.0116972, 0, -0.0323837, -88.2419, -3.1212, 112.983 )
+mesh = SubResource( 24 )
+material = SubResource( 25 )
+
+[node name="CSGMesh52" type="CSGMesh" parent="Maze/ActualMaze/CSGMesh52"]
+transform = Transform( -0.0314928, 0, 8.70691, 0, 0.590459, 0, -0.0116041, 0, -0.286173, -89.1011, -1.54681, 113.006 )
+mesh = SubResource( 22 )
+material = SubResource( 38 )
 
 [node name="CSGMesh53" type="CSGMesh" parent="Maze/ActualMaze"]
 transform = Transform( 0.110931, 0, 0, 0, 1, 0, 0, 0, 0.113161, -5.20741, 0.861572, 0 )
